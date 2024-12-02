@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "metaflow-memray"
+version = "0.0.1"
+description = "Memray extension for Metaflow"
+authors = [
+    { name = "Outerbounds", email = "help@outerbounds.co" },
+]
+license = { text = "Apache Software License" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "metaflow",
+    "memray",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["metaflow_extensions"]
+
+[tool.hatch.build]
+include = [
+    "metaflow_extensions",
+]
